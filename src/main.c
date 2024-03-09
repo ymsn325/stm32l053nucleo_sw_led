@@ -14,7 +14,7 @@ void pin_settings(void)
 
 int read_button(void)
 {
-    return GPIOC->IDR;
+    return (GPIOC->IDR & GPIO_IDR_ID13_Msk) >> GPIO_IDR_ID13_Pos;
 }
 
 int main(void)

@@ -43,9 +43,6 @@ src/main.c(5): note: declare 'static' if the function is not intended to be used
     5 | void pin_settings(void)
       | ^
       | static 
-src/main.c(17): warning: implicit conversion changes signedness: 'volatile uint32_t' (aka 'volatile unsigned int') to 'int' [-Wsign-conversion]
-   17 |     return GPIOC->IDR;
-      |     ~~~~~~ ~~~~~~~^~~
 src/main.c(15): warning: no previous prototype for function 'read_button' [-Wmissing-prototypes]
    15 | int read_button(void)
       |     ^
@@ -59,11 +56,11 @@ src/main.c(36): warning: no newline at end of file [-Wnewline-eof]
 src/main.c(35): warning: 'return' will never be executed [-Wunreachable-code-return]
    35 |     return 0;
       |            ^
-6 warnings generated.
+5 warnings generated.
 compiling main.c...
 linking...
-Program Size: Code=476 RO-data=208 RW-data=0 ZI-data=1640  
-".\Objects\sw_led.axf" - 0 Error(s), 6 Warning(s).
+Program Size: Code=484 RO-data=208 RW-data=0 ZI-data=1640  
+".\Objects\sw_led.axf" - 0 Error(s), 5 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -89,10 +86,10 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE@6.0.0
 
    * Component: Keil::Device&Standalone:Startup@1.12.1
-      Source file:   MDK/Device/Source/ARM/STM32L0xx_OPT.s
-      Source file:   Drivers/CMSIS/Device/ST/STM32L0xx/Source/Templates/arm/startup_stm32l053xx.s
-      Include file:  Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h
       Source file:   Drivers/CMSIS/Device/ST/STM32L0xx/Source/Templates/system_stm32l0xx.c
+      Source file:   MDK/Device/Source/ARM/STM32L0xx_OPT.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32L0xx/Source/Templates/arm/startup_stm32l053xx.s
 Build Time Elapsed:  00:00:00
 </pre>
 </body>
