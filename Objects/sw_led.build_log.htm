@@ -1,0 +1,99 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: É Vision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Shunsuke Yamamoto
+Individual
+User-based license: Keil MDK Community
+Valid until: Jun 1 2033. Cached until: Mar 15 2024
+ 
+Tool Versions:
+Toolchain:       Keil MDK Community  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.6.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TARMCM1.DLL V1.14.6.0
+ 
+<h2>Project:</h2>
+C:\Users\yamas\Documents\uvision\stm32l053nucleo_sw_led\sw_led.uvprojx
+Project File Date:  03/09/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+src/main.c(3): warning: no previous extern declaration for non-static variable 'button_state' [-Wmissing-variable-declarations]
+    3 | int button_state = 0;
+      |     ^
+src/main.c(3): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    3 | int button_state = 0;
+      | ^
+src/main.c(5): warning: no previous prototype for function 'pin_settings' [-Wmissing-prototypes]
+    5 | void pin_settings(void)
+      |      ^
+src/main.c(5): note: declare 'static' if the function is not intended to be used outside of this translation unit
+    5 | void pin_settings(void)
+      | ^
+      | static 
+src/main.c(17): warning: implicit conversion changes signedness: 'volatile uint32_t' (aka 'volatile unsigned int') to 'int' [-Wsign-conversion]
+   17 |     return GPIOC->IDR;
+      |     ~~~~~~ ~~~~~~~^~~
+src/main.c(15): warning: no previous prototype for function 'read_button' [-Wmissing-prototypes]
+   15 | int read_button(void)
+      |     ^
+src/main.c(15): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   15 | int read_button(void)
+      | ^
+      | static 
+src/main.c(36): warning: no newline at end of file [-Wnewline-eof]
+   36 | }
+      |  ^
+src/main.c(35): warning: 'return' will never be executed [-Wunreachable-code-return]
+   35 |     return 0;
+      |            ^
+6 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=476 RO-data=208 RW-data=0 ZI-data=1640  
+".\Objects\sw_led.axf" - 0 Error(s), 6 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
+                ARM::CMSIS@6.0.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.0.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32L0xx_DFP.2.2.0.pack
+                Keil::STM32L0xx_DFP@2.2.0
+                STMicroelectronics STM32L0 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.12.1
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/yamas/AppData/Local/arm/packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include
+  C:/Users/yamas/AppData/Local/arm/packs/Keil/STM32L0xx_DFP/2.2.0/Drivers/CMSIS/Device/ST/STM32L0xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.0.0
+
+   * Component: Keil::Device&Standalone:Startup@1.12.1
+      Source file:   MDK/Device/Source/ARM/STM32L0xx_OPT.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32L0xx/Source/Templates/arm/startup_stm32l053xx.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32L0xx/Source/Templates/system_stm32l0xx.c
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
